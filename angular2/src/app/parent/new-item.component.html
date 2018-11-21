@@ -1,0 +1,21 @@
+<section *ngIf="newItem">
+<h2>{{newItem.Title}}</h2>
+<div>{{newItem.Image}}</div>
+<div><img src="media80x80/{{newItem.Image}}"/></div>
+<div class="tools">
+  
+  <a class="delete" (click)="onDelete()">
+    -
+  </a>
+  <a routerLink="/add/child" class="add" (click)="onClick(newItem.ID)" >
+    +
+  </a>
+</div>
+
+  <child-item 
+    *ngFor="let child of newItem.Children"
+    [child]="child"
+    (deleteChild)="onNewChildDelete($event)">
+  </child-item>
+
+</section>

@@ -1,0 +1,15 @@
+<section *ngIf="child">
+
+<h2>{{child.TitleChild}}</h2>
+<div>{{child.ImageChild}}</div>
+<div><img src="media80x80/{{child.ImageChild}}"/></div>
+<div class="tools">
+  
+  <a class="delete" (click)="onDeleteChild()">
+    -
+  </a>
+  <a class="add" routerLink="/add/child" class="add" (click)="onClick(child.IdParent)">
+    +
+  </a>
+</div>
+</section>

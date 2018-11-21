@@ -1,0 +1,1 @@
+export { ChildItemComponent } from './child-item.component';

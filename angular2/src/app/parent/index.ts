@@ -1,0 +1,1 @@
+export { NewItemComponent } from './new-item.component';

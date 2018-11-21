@@ -1,0 +1,22 @@
+<header>
+  <h2>Add child to the tree</h2>
+</header>
+<form
+  [formGroup]="form"
+  (ngSubmit)="onSubmitChild(form.value)"
+  (parentIdClick)="onParentIdClick($event)"
+  (childIdClick)="onChildIdClick($event)">
+  <ul>
+    <li>
+      <label for="title">Please insert your title</label>
+      <input type="text" name="title" id="title" formControlName="title">
+      <div *ngIf="form.controls.title.errors?.pattern" class="error">Name can consist only from english letters and numbers</div>
+    </li>
+    <li>
+      <label for="image">Please select your image</label>
+      <input  type="file" name="image" formControlName="image" (change)="onChangeChild($event)"/>
+      <div *ngIf="form.controls.image.errors?.image" class="error">Select only images</div>
+    </li>
+  </ul>
+  <button routerLink="/" type="submit" [disabled]="!form.valid">Save</button>
+</form>

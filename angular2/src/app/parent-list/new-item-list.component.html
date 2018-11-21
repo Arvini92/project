@@ -1,0 +1,6 @@
+<section>
+  <new-item 
+    *ngFor="let newItem of newItems"
+    [newItem]="newItem"
+    (delete)="onNewItemDelete($event)"></new-item>
+</section>

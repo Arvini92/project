@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+  padding: 10px;
+}
+header {
+  color: #c6c5c3;
+}
+
+header > h2 {
+  font-size: 1.4em;
+}
+header > h2.error {
+  color: #d93a3e;
+}
+section {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+
+footer {
+  text-align: right;
+}
